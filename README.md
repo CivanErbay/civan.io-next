@@ -32,3 +32,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Start Servers
+### 1 Start NextJS 
+"npm run dev" from the root-folder 
+
+### 2 Start Sanity-framework
+cd into sanity folder and do "sanity start"
+
+### ADD NEW TYPES FOR SANITY STUDIO
+Add in schema (sanity-folder) a new schema file with the necessary fields and import that into schema.js 
+
+### DEPLOY SANITY STUDIO 
+CD into sanity-folder
+type "sanity deploy" into console
+
+### DEPLOY NEXT APP
+Push code into Github Repo
+Add ENV variables to Vercel 
+Deploy via vercel

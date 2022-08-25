@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+/civanio/node_modules
+
 # testing
 /coverage
 
