@@ -1,6 +1,6 @@
 export default function Showcases() {
   return (
-    <div className="100vh bg-gray-500 flex justify-center items-center">
+    <div className="h-screen bg-gray-500 translate-y-full hidden">
       <h2>Showcases</h2>
     </div>
   );
