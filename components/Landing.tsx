@@ -5,13 +5,12 @@ export default function Landing() {
     <>
       <div className="w-full relative h-full flex items-center justify-center">
         <div className="text-[100px] lg:text-[300px] mr-10 mb-10 leading-none">
-          {" "}
-          &lt;{" "}
+          &lt;
         </div>
 
         <div className="flex flex-col font-Trispace">
           <h1 className="text-xl lg:text-7xl">
-            It's me <span className="text-gray-600 font-bold">Civan</span>
+            It&apos;s me <span className="text-gray-600 font-bold">Civan</span>
           </h1>
           <p className="text-l lg:text-2xl mt-3 lg:ml-2">
             a passionate & reliable frontend developer
@@ -19,8 +18,7 @@ export default function Landing() {
         </div>
 
         <div className="text-[100px] lg:text-[300px] ml-10 mb-10 leading-none">
-          {" "}
-          &gt;{" "}
+          &gt;
         </div>
       </div>
       <div className="absolute bottom-0">
