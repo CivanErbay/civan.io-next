@@ -9,6 +9,7 @@ export default function Landing() {
           layout="fill"
           objectFit="contain"
           alt="civan erbay"
+          className="transform rotate-[109deg]"
         ></Image>
         <div className="text-[30px] mb-4 leading-none lg:text-[200px] lg:mb-10 font-bold lg:font-normal">
           &lt;
