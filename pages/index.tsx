@@ -2,19 +2,14 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Landing from "../components/Landing";
 import Footer from "../components/Footer";
-import Showcases from "../components/Showcases";
+import { Showcases } from "../components/Showcases";
+import { MutableRefObject, useRef } from "react";
 
 const Home: NextPage = () => {
-  //Finish page trigger logic
-  const triggerTransition = (e: any) => {
-    console.log(e.deltaY);
-    /*   e.deltaY > 0 ?  */
-  };
-
   return (
     <div
-      className="flex flex-col items-center justify-center max-w-6xl mx-auto lg:h-screen absolute inset-0 font-Trispace"
-      onWheel={(e) => triggerTransition(e)}
+      className="flex flex-col items-center justify-center max-w-6xl mx-auto inset-0 font-Trispace" //absolute
+      onWheel={(e) => console.log(e)}
     >
       <Head>
         <title>Civan</title>
@@ -22,8 +17,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Landing />
-      <Footer />
+
       <Showcases />
+       <Footer />
     </div>
   );
 };
