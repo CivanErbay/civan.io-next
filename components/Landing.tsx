@@ -1,8 +1,16 @@
+import Image from "next/image";
+
 export default function Landing() {
   return (
     <>
       <div className="w-full relative h-screen flex items-center justify-center flex-col px-5 lg:flex-row">
-        <div className="text-[30px] mb-4 leading-none lg:text-[200px] lg:mb-10">
+        <Image
+          src="/grid.png"
+          layout="fill"
+          objectFit="contain"
+          alt="civan erbay"
+        ></Image>
+        <div className="text-[30px] mb-4 leading-none lg:text-[200px] lg:mb-10 font-bold lg:font-normal">
           &lt;
         </div>
 
@@ -15,7 +23,7 @@ export default function Landing() {
           </p>
         </div>
 
-        <div className="text-[30px] leading-none flex mt-5 lg:mt-0 lg:text-[200px]">
+        <div className="text-[30px] leading-none flex mt-5 lg:mt-0 lg:text-[200px] font-bold lg:font-normal">
           <span>/ </span>
           <span>&gt;</span>
         </div>

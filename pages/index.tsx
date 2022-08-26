@@ -3,7 +3,6 @@ import Head from "next/head";
 import Landing from "../components/Landing";
 import Footer from "../components/Footer";
 import { Showcases } from "../components/Showcases";
-import { MutableRefObject, useRef } from "react";
 
 const Home: NextPage = () => {
   return (
