@@ -6,7 +6,13 @@ import React from "react";
 export const Showcases = React.forwardRef((props, ref) => {
   return (
     <div
-      ref={ref}
+      ref={(element) => {
+        if (typeof ref === "function") {
+          ref(element);
+        } else if (ref != null){
+          ref.current = element;
+        }
+      }}
       className="w-full relative h-screen flex items-center justify-center flex-col px-5"
     >
       <h2 className="font-bold">Showcases</h2>

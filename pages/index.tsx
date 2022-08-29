@@ -4,10 +4,13 @@ import Landing from "../components/Landing";
 import Footer from "../components/Footer";
 import { Showcases } from "../components/Showcases";
 import { Navigation } from "../components/Navigation";
-import { useRef } from "react";
+import { MutableRefObject, useRef } from "react";
 
 const Home: NextPage = () => {
-  const showCaseRef = useRef();
+  const showCaseRef = useRef<
+    HTMLButtonElement | null | MutableRefObject<HTMLButtonElement>
+  >(null)
+  
 
   return (
     <div
