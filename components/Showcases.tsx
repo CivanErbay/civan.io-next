@@ -1,21 +1,22 @@
 import Link from "next/link";
 import React from "react";
 
-interface refProps {
-  value: string;
-  // other props with basic types
-}
 
 // eslint-disable-next-line react/display-name
-export const Showcases = () => {
+export const Showcases = React.forwardRef((props, ref) => {
   return (
-    <div className="w-full relative h-screen flex items-center justify-center flex-col px-5">
-      <h2>Showcases</h2>
+    <div
+      ref={ref}
+      className="w-full relative h-screen flex items-center justify-center flex-col px-5"
+    >
+      <h2 className="font-bold">Showcases</h2>
       <div className="flex flex-col">
+        <Link href="/">deka.de (denkwerk)</Link>
+        <Link href="/">swm.de (denkwerk)</Link>
         <Link href="/">Emmortalise</Link>
-        <Link href="/">Emmortalise</Link>
-        <Link href="/">Emmortalise</Link>
+        <Link href="/">TellZy</Link>
+        <Link href="/">MundZuMund-Festival</Link>
       </div>
     </div>
   );
-};
+});

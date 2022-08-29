@@ -4,13 +4,16 @@ export default function Landing() {
   return (
     <>
       <div className="w-full relative h-screen flex items-center justify-center flex-col px-5 lg:flex-row">
-        <Image
-          src="/grid.png"
-          layout="fill"
-          objectFit="contain"
-          alt="civan erbay"
-          className="transform rotate-[109deg]"
-        ></Image>
+     
+     {/*      <Image
+            src="/grid.png"
+            layout="fill"
+            objectFit="contain"
+            alt="civan erbay"
+            className="transform rotate-[90deg] left-0"
+          ></Image> */}
+
+
         <div className="text-[30px] mb-4 leading-none lg:text-[200px] lg:mb-10 font-bold lg:font-normal">
           &lt;
         </div>
