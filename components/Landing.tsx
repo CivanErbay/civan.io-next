@@ -1,4 +1,3 @@
-import style from "./Landing.module.css";
 import React, { useEffect } from "react";
 
 export default function Landing() {
@@ -46,7 +45,7 @@ export default function Landing() {
         <div className={`flex flex-col px-5`}>
           <h1
             id="typewriter"
-            className={`text-xl lg:text-5xl text-justify lg:text-left ${style.typewriter}`}
+            className={`text-xl lg:text-5xl text-justify lg:text-left`}
           >
             {/*  Hey there & welcome to my personal webspace, I&apos;m{" "} Civan */}
           </h1>
