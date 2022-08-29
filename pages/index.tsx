@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Landing from "../components/Landing";
 import Footer from "../components/Footer";
+import Impressum from "../components/Impressum";
 import { Showcases } from "../components/Showcases";
 import { Navigation } from "../components/Navigation";
 import { MutableRefObject, useRef } from "react";
@@ -14,7 +15,7 @@ const Home: NextPage = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center max-w-6xl mx-auto inset-0 font-Trispace" //absolute
+      className="flex flex-col items-center justify-center max-w-6xl mx-auto inset-0 font-Trispace shadow-2xl bg-white" //absolute
     >
       <Head>
         <title>Civan</title>
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
       <Landing />
 
       <Showcases ref={showCaseRef} />
+      <Impressum />
       <Footer />
     </div>
   );
