@@ -9,14 +9,6 @@ import { useRef } from "react";
 const Home: NextPage = () => {
   const showCaseRef = useRef();
 
-  /* const scrollIntoView = () => {
-     showCaseRef.current.scrollIntoView({
-       block: "center",
-       inline: "center",
-       behavior: "smooth",
-     });
-   }; */
-
   return (
     <div
       className="flex flex-col items-center justify-center max-w-6xl mx-auto inset-0 font-Trispace" //absolute
@@ -27,9 +19,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation ref={showCaseRef} />
-      {/*   <div className="sticky top-0 z-50 flex justify-evenly">
-        <button onClick={scrollIntoView}>Showcases</button>
-      </div> */}
       <Landing />
 
       <Showcases ref={showCaseRef} />

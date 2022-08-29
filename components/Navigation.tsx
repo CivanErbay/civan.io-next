@@ -4,7 +4,7 @@ import React from "react";
 export const Navigation = React.forwardRef((props, ref) => {
 
    const scrollIntoView = () => {
-      ref.current.scrollIntoView({
+      ref?.current.scrollIntoView({
        block: "center",
        inline: "center",
        behavior: "smooth",
