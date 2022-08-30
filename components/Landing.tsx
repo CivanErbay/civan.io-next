@@ -1,64 +1,70 @@
-import React, { useEffect } from "react";
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useState } from "react";
+import Description from "./Description";
+import FadeIn from "./FadeIn";
+import styles from "./Landing.module.css";
+import { useTrail, a } from "@react-spring/web";
+import Image from "next/image";
 
 export default function Landing() {
-  useEffect(() => {
-    const textDisplay = document.getElementById("typewriter");
-    const phrases = ["Hey there & welcome to my personal webspace, I'm Civan "];
-    let i = 0;
-    let j = 0;
-    let currentPhrase: any = [];
+  const Trail: React.FC<{ open: boolean; children: any }> = ({
+    open,
+    children,
+  }) => {
+    const items = React.Children.toArray(children);
+    const trail = useTrail(items.length, {
+      config: { mass: 5, tension: 3000, friction: 1000 },
+      opacity: open ? 1 : 0,
+      x: open ? 0 : 20,
+      height: open ? 110 : 0,
+      from: { opacity: 0, x: 20, height: 0 },
+    });
+    return (
+      <div>
+        {trail.map(({ height, ...style }, index) => (
+          <a.div
+            key={index}
+            className={(styles.trailsText)}
+            style={style}
+          >
+            <a.div style={{ height }}>
+              {items[index]}
+            </a.div>
+          </a.div>
+        ))}
+      </div>
+    );
+  };
 
-    function loop() {
-
-      if (textDisplay != null) {
-        textDisplay.innerHTML = currentPhrase.join("");
-
-        if (i < phrases.length) {
-          if (j <= phrases[i].length) {
-            currentPhrase.push(phrases[i][j]);
-            j++;
-            textDisplay.innerHTML = currentPhrase.join("");
-          } else return;
-        }
-      }
-      setTimeout(loop, 150);
-    }
-
-    loop();
-  });
-
+  const [open, set] = useState(true);
   return (
     <>
       <div className="w-full relative h-screen flex items-center justify-center flex-col px-5 lg:flex-row">
-        {/*      <Image
-            src="/grid.png"
-            layout="fill"
-            objectFit="contain"
-            alt="civan erbay"
-            className="transform rotate-[90deg] left-0"
-          ></Image> */}
-
-        <div className="text-[30px] mb-4 leading-none lg:text-[200px] lg:mb-10 font-bold lg:font-normal">
-          &lt;
-        </div>
-
-        <div className={`flex flex-col px-5`}>
-          <h1
-            id="typewriter"
-            className={`text-xl lg:text-5xl text-justify lg:text-left`}
-          >
-            {/*  Hey there & welcome to my personal webspace, I&apos;m{" "} Civan */}
-          </h1>
-          <p className="text-l lg:text-2xl mt-3 lg:ml-2 text-center lg:text-left">
-            another passionate & reliable frontend developer
-          </p>
-        </div>
-
-        <div className="text-[30px] leading-none flex mt-5 lg:mt-0 lg:text-[200px] font-bold lg:font-normal">
-          <span>/ </span>
-          <span>&gt;</span>
+        <div
+          className={`${styles.container} px-5`}
+          onClick={() => set((state) => !state)}
+        >
+          <Trail open={open}>
+            <span>Hey there!</span>
+            <span>
+              I&apos;m <span style={{ color: "darkgreen" }}>Civan</span>
+            </span>
+            <span>This is my</span>
+            <span>
+              <Image
+                src="/web.svg"
+                layout="fill"
+                objectFit="contain"
+                alt="civan erbay"
+              ></Image>
+            </span>
+          </Trail>
         </div>
       </div>
+
+      <FadeIn>
+        <Description />
+      </FadeIn>
     </>
   );
 }

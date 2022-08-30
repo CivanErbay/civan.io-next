@@ -6,12 +6,12 @@ import Impressum from "../components/Impressum";
 import { Showcases } from "../components/Showcases";
 import { Navigation } from "../components/Navigation";
 import { MutableRefObject, useRef } from "react";
+import FadeIn from "../components/FadeIn";
 
 const Home: NextPage = () => {
   const showCaseRef = useRef<
     HTMLButtonElement | null | MutableRefObject<HTMLButtonElement>
-  >(null)
-  
+  >(null);
 
   return (
     <div
@@ -25,9 +25,14 @@ const Home: NextPage = () => {
       <Navigation ref={showCaseRef} />
       <Landing />
 
-      <Showcases ref={showCaseRef} />
+      <FadeIn>
+        <Showcases ref={showCaseRef} />
+      </FadeIn>
+
       <Impressum />
-      <Footer />
+      <FadeIn>
+        <Footer />
+      </FadeIn>
     </div>
   );
 };
