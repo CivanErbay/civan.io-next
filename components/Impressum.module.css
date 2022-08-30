@@ -1,4 +1,21 @@
-.impressum {
-    writing-mode: tb-rl;
-    transform: rotate(-180deg);
+.impressumLeft {
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+}
+.impressumRight {
+  writing-mode: tb-rl;
+}
+.iconList {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.iconList li a {
+  width: 20px;
+  height: 20px;
 }

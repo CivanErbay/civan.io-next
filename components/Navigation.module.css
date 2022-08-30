@@ -1,0 +1,14 @@
+.animate {
+  transition: all .35s ease-in-out;
+}
+
+.animate.grow {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.navigation {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}

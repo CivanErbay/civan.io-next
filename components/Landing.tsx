@@ -38,9 +38,11 @@ export default function Landing() {
           <Trail open={open}>
             <span style={{ fontSize: "16px", letterSpacing: "0", fontWeight: "normal" }}>Hey there!</span>
             <span>
-              I&apos;m <span style={{ color: "darkgreen" }}>Civan</span> - This is
-              my
+              I&apos;m <span style={{ color: "darkgreen" }}>Civan</span> 
+              
+              
             </span>
+            <span>this is my</span>
             <span>
               <Image
                 src="/web.svg"
