@@ -15,7 +15,6 @@ export default function Footer() {
             className={`flex items-center h-screen bg-emerald-400 lg:bg-transparent ${style.impressum}`}
           >
             <div className="h-[150px] w-[2px] bg-black mb-6"></div>
-            <h2 className="mb-6">contact</h2>
             <h2>legal notice</h2>
           </div>
         </div>

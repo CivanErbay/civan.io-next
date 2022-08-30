@@ -22,14 +22,8 @@ export default function Landing() {
     return (
       <div>
         {trail.map(({ height, ...style }, index) => (
-          <a.div
-            key={index}
-            className={(styles.trailsText)}
-            style={style}
-          >
-            <a.div style={{ height }}>
-              {items[index]}
-            </a.div>
+          <a.div key={index} className={styles.trailsText} style={style}>
+            <a.div style={{ height }}>{items[index]}</a.div>
           </a.div>
         ))}
       </div>
@@ -40,16 +34,13 @@ export default function Landing() {
   return (
     <>
       <div className="w-full relative h-screen flex items-center justify-center flex-col px-5 lg:flex-row">
-        <div
-          className={`${styles.container} px-5`}
-          onClick={() => set((state) => !state)}
-        >
+        <div className={`${styles.container} px-5`}>
           <Trail open={open}>
-            <span>Hey there!</span>
+            <span style={{ fontSize: "16px", letterSpacing: "0", fontWeight: "normal" }}>Hey there!</span>
             <span>
-              I&apos;m <span style={{ color: "darkgreen" }}>Civan</span>
+              I&apos;m <span style={{ color: "darkgreen" }}>Civan</span> - This is
+              my
             </span>
-            <span>This is my</span>
             <span>
               <Image
                 src="/web.svg"

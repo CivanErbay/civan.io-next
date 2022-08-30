@@ -16,7 +16,7 @@ export default function Description() {
 
     return (
       <animated.div style={props}>
-        <h4 className="text-center font-2xl">
+        <h4 className="text-center font-2xl px-5">
           another passionate & reliable frontend developer
         </h4>
       </animated.div>
