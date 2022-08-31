@@ -1,14 +1,28 @@
 .animate {
-  transition: all .35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
-.animate.grow {
+.animate.hide {
   transform: translateY(-50%);
   opacity: 0;
 }
 
 .navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 1024px) {
+  .navigation {
     width: 30%;
-    display: flex;
-    justify-content: space-evenly;
+  }
+}
+
+.appear {
+  transition: transform 1s ease-in-out;
+}
+
+.appear.swipein {
+  transform: translateY(0);
 }

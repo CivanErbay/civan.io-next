@@ -15,26 +15,35 @@ export const Navigation = React.forwardRef<any>((props, ref) => {
       });
     }
   };
-  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     window.addEventListener("scroll", (event) => {
-      setScrollY(window.scrollY);
       if (window.scrollY > 150) setAnimate(true);
       else setAnimate(false);
     });
-  }, []);
+
+    setTimeout(() => {
+      setAppear(true);
+    }, 1000);
+
+    console.log(appear);
+  });
 
   const [animate, setAnimate] = useState(false);
+  const [appear, setAppear] = useState(false);
 
   return (
     <>
-      <div className="sticky top-0 py-5 z-50 flex justify-end w-full">
+      <div
+        className={`sticky top-0 py-5 z-50 flex w-screen lg:justify-end lg:w-full -translate-y-10 ${
+          styles.appear
+        } ${appear && styles.swipein}`}
+      >
         <div
           className={classNames(
             styles.animate,
             styles.navigation,
-            animate && styles.grow
+            animate && styles.hide
           )}
         >
           <button onClick={scrollIntoView}>Showcases</button>

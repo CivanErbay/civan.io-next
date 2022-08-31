@@ -33,7 +33,7 @@ export default function Landing() {
   const [open, set] = useState(true);
   return (
     <>
-      <div className="w-full relative h-screen flex items-center justify-center flex-col px-5 lg:flex-row">
+      <div className="relative h-screen flex items-center justify-center flex-col px-5 lg:flex-row">
         <div className={`${styles.container} px-5`}>
           <Trail open={open}>
             <span style={{ fontSize: "16px", letterSpacing: "0", fontWeight: "normal" }}>Hey there!</span>
