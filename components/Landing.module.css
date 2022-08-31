@@ -11,9 +11,10 @@
   overflow: hidden;
 }
 
-.trailsText:last-child {
+.trailsText:last-child, .trailsText:nth-child(3) {
   margin-top: 30px;
-  height: 200px;
+  height: 100%; 
+  font-weight: 400;
 }
 
 @media only screen and (min-width: 1024px) {

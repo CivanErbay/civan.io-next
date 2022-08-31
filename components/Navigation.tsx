@@ -24,9 +24,8 @@ export const Navigation = React.forwardRef<any>((props, ref) => {
 
     setTimeout(() => {
       setAppear(true);
-    }, 1000);
+    }, 1400);
 
-    console.log(appear);
   });
 
   const [animate, setAnimate] = useState(false);

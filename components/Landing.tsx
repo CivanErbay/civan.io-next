@@ -23,41 +23,49 @@ export default function Landing() {
       <div>
         {trail.map(({ height, ...style }, index) => (
           <a.div key={index} className={styles.trailsText} style={style}>
-            <a.div style={{ height }}>{items[index]}</a.div>
+            <a.div >{items[index]}</a.div>
           </a.div>
         ))}
       </div>
     );
   };
+  let open = true;
 
-  const [open, set] = useState(true);
   return (
     <>
-      <div className="relative h-screen flex items-center justify-center flex-col px-5 lg:flex-row">
+      <div className="relative h-screen max-w-3xl flex items-center justify-center flex-col px-5 lg:flex-row">
         <div className={`${styles.container} px-5`}>
           <Trail open={open}>
-            <span style={{ fontSize: "16px", letterSpacing: "0", fontWeight: "normal" }}>Hey there!</span>
-            <span>
-              I&apos;m <span style={{ color: "darkgreen" }}>Civan</span> 
-              
-              
+            <span
+              style={{
+                fontSize: "16px",
+                letterSpacing: "0",
+                fontWeight: "normal",
+              }}
+            >
+              Hey there!
             </span>
-            <span>this is my</span>
             <span>
+              I&apos;m <span style={{ color: "darkgreen" }}>Civan</span>
+            </span>
+            <span>another passionate & reliable frontend developer</span>
+            <span>welcome to my webspace</span>
+
+            {/*  <span>
               <Image
                 src="/web.svg"
                 layout="fill"
                 objectFit="contain"
                 alt="civan erbay"
               ></Image>
-            </span>
+            </span> */}
           </Trail>
         </div>
       </div>
 
-      <FadeIn>
+      {/*   <FadeIn>
         <Description />
-      </FadeIn>
+      </FadeIn> */}
     </>
   );
 }
