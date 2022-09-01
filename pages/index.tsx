@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center max-w-6xl mx-auto inset-0 font-Trispace shadow-2xl bg-white" //absolute
+      className="flex flex-col items-center justify-center max-w-5xl w-full mx-auto inset-0 font-Trispace shadow-2xl bg-white" //absolute
     >
       <Head>
         <title>Civan</title>
@@ -30,9 +30,8 @@ const Home: NextPage = () => {
       </FadeIn>
 
       <Impressum />
-      <FadeIn>
-        <Footer />
-      </FadeIn>
+
+      <Footer />
     </div>
   );
 };

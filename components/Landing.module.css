@@ -1,26 +1,27 @@
 .trailsText {
   position: relative;
   width: 100%;
-  height: 70px;
+  /* height: 70px; */
   line-height: 80px;
   color: black;
   font-size: 3em;
-  font-weight: 700;
+/*   font-weight: 700; */
   letter-spacing: -0.08em;
   will-change: transform, opacity;
   overflow: hidden;
 }
 
-.trailsText:last-child, .trailsText:nth-child(3) {
-  margin-top: 30px;
+.trailsText:last-child {
+  /* margin-top: 30px; */
   height: 100%; 
   font-weight: 400;
+  font-size: 2em;
 }
 
 @media only screen and (min-width: 1024px) {
   .trailsText {
     font-size: 3em;
-    height: 80px;
+  /*   height: 80px; */
   }
 }
 
