@@ -10,21 +10,22 @@ export default function Impressum() {
   const [animate, setAnimate] = useState(false);
 
   return (
-    <div
-      className={`bottom-0 flex justify-between items-end w-full fixed lg:px-5 opacity-0 -z-50 ${
-        styles.animate
-      } ${animate && styles.appear}`}
-    >
+    /*    <div
+      className={`bottom-0 lg:px-5 opacity-0 ${styles.animate} ${
+        animate && styles.appear
+      }`}
+    > */
+    <>
+      {" "}
       <div
-        className={`relative flex justify-between items-center px-2 h-screen ${styles.impressumLeft}`}
+        className={`fixed top-0 left-0 flex justify-between items-center px-2 h-screen ${styles.impressumLeft}`}
       >
         <div className="h-1/3 w-[2px] bg-white"></div>
-        <h2>civan.erbay@web.de &#x2f;&#x2f; 2022</h2>
+        <h2 className="text-xs">civan.erbay@web.de &#x2f;&#x2f; 2022</h2>
         <div className="h-1/3 w-[2px] bg-white"></div>
       </div>
-      <div className="relative flex flex-col lg:flex-row">
         <div
-          className={`flex items-center justify-between h-screen px-2 ${styles.impressumRight}`}
+          className={`fixed top-0 right-0 flex justify-between items-center px-2 h-screen ${styles.impressumRight}`}
         >
           <div className="h-1/3 w-[2px] bg-white"></div>
 
@@ -90,8 +91,7 @@ export default function Impressum() {
 
           <div className="h-1/3 w-[2px] bg-white"></div>
         </div>
-      </div>
-    </div>
-    /*  </div> */
+     
+    </>
   );
 }
