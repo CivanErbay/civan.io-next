@@ -33,7 +33,7 @@ export default function Landing() {
 
   return (
     <>
-      <div className="relative h-screen max-w-3xl flex items-center justify-center flex-col px-7 lg:flex-row">
+      <div className="relative h-screen max-w-3xl flex items-center justify-center flex-col px-7 lg:flex-row text-white">
         <div className={`${styles.container} px-5`}>
           <Trail open={open}>
             <span
@@ -46,7 +46,7 @@ export default function Landing() {
               Hey there!
             </span>
             <span>
-              I&apos;m <span style={{ color: "darkgreen", fontWeight: "700" }}>Civan</span>
+              I&apos;m <span style={{ color: "lightgreen", fontWeight: "700" }}>Civan</span>
             </span>
             <span>another passionate & reliable frontend developer</span>
             <span>welcome to my webspace</span>

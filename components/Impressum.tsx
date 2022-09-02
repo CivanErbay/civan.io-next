@@ -19,15 +19,15 @@ export default function Impressum() {
       <div
         className={`relative flex justify-between items-center px-2 h-screen ${styles.impressumLeft}`}
       >
-        <div className="h-1/3 w-[2px] bg-black"></div>
+        <div className="h-1/3 w-[2px] bg-white"></div>
         <h2>civan.erbay@web.de &#x2f;&#x2f; 2022</h2>
-        <div className="h-1/3 w-[2px] bg-black"></div>
+        <div className="h-1/3 w-[2px] bg-white"></div>
       </div>
       <div className="relative flex flex-col lg:flex-row">
         <div
           className={`flex items-center justify-between h-screen px-2 ${styles.impressumRight}`}
         >
-          <div className="h-1/3 w-[2px] bg-black"></div>
+          <div className="h-1/3 w-[2px] bg-white"></div>
 
           <a
             href="https://twitter.com/navic_007?lang=de"
@@ -35,11 +35,10 @@ export default function Impressum() {
             target="_blank"
             rel="noreferrer"
           >
-            {/*   <Image src="/twitter.png" layout="fill" alt="twitter"></Image> */}
             <picture>
               <img
                 className={styles.iconList}
-                src="/twitter.png"
+                src="/twitter-white.png"
                 alt="twitter"
               />
             </picture>
@@ -54,7 +53,7 @@ export default function Impressum() {
             <picture>
               <img
                 className={styles.iconList}
-                src="/linkedin.png"
+                src="/linkedin-white.png"
                 alt="twitter"
               />
             </picture>
@@ -67,7 +66,7 @@ export default function Impressum() {
             rel="noreferrer"
           >
             <picture>
-              <img className={styles.iconList} src="/insta.png" alt="twitter" />
+              <img className={styles.iconList} src="/insta-white.png" alt="twitter" />
             </picture>
           </a>
 
@@ -80,13 +79,13 @@ export default function Impressum() {
             <picture>
               <img
                 className={styles.iconList}
-                src="/github.png"
+                src="/github-white.png"
                 alt="twitter"
               />
             </picture>
           </a>
 
-          <div className="h-1/3 w-[2px] bg-black"></div>
+          <div className="h-1/3 w-[2px] bg-white"></div>
         </div>
       </div>
     </div>
