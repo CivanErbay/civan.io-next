@@ -19,6 +19,12 @@ export default function Description() {
         <h4 className="text-center font-2xl px-5">
           another passionate & reliable frontend developer
         </h4>
+        <p className="text-center font-2xl px-5">
+          currently employed at{" "}
+          <a className="underline" href="https://denkwerk.com">
+            denkwerk
+          </a>
+        </p>
       </animated.div>
     );
   }

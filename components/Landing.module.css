@@ -1,37 +1,7 @@
-.trailsText {
-  position: relative;
-  width: 100%;
-  /* height: 70px; */
-  line-height: 80px;
-  font-size: 3em;
-/*   font-weight: 700; */
-  letter-spacing: -0.08em;
-  will-change: transform, opacity;
-  overflow: hidden;
+.animate {
+  transition: all 1s ease-in-out;
 }
 
-.trailsText:last-child {
-  /* margin-top: 30px; */
-  height: 100%; 
-  font-weight: 400;
-  font-size: 2em;
-}
-
-@media only screen and (min-width: 1024px) {
-  .trailsText {
-    font-size: 3em;
-  /*   height: 80px; */
-  }
-}
-
-.trailsText > div {
-  padding-right: 0.05em;
-  overflow: hidden;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  justify-content: center;
+.animate.appear {
+  opacity: 1;
 }

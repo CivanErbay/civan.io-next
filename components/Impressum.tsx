@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import styles from "./Impressum.module.css";
-import classNames from "classnames";
 
 export default function Impressum() {
   useEffect(() => {
@@ -12,7 +11,7 @@ export default function Impressum() {
 
   return (
     <div
-      className={`bottom-0 flex justify-between items-end w-full fixed lg:px-5 opacity-0 ${
+      className={`bottom-0 flex justify-between items-end w-full fixed lg:px-5 opacity-0 -z-50 ${
         styles.animate
       } ${animate && styles.appear}`}
     >
@@ -66,7 +65,11 @@ export default function Impressum() {
             rel="noreferrer"
           >
             <picture>
-              <img className={styles.iconList} src="/insta-white.png" alt="twitter" />
+              <img
+                className={styles.iconList}
+                src="/insta-white.png"
+                alt="twitter"
+              />
             </picture>
           </a>
 
