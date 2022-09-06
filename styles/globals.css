@@ -28,4 +28,12 @@ a {
   body {
     background-color: #164e63;
   }
+
+  .animate {
+  transition: all 1s ease-in-out;
+}
+
+  .animate.wideLanding {
+    width: 100%;
+}
 }

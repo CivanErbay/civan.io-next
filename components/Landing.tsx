@@ -3,14 +3,13 @@ import React, { useEffect, useState } from "react";
 import Description from "./Description";
 import FadeIn from "./FadeIn";
 import styles from "./Landing.module.css";
-import { useTrail, a } from "@react-spring/web";
 import Image from "next/image";
 
 export default function Landing() {
   useEffect(() => {
     setTimeout(() => {
       setAnimate(true);
-    }, 1000);
+    }, 1500);
     setTimeout(() => {
       setAnimate2(true);
     }, 1500);
