@@ -30,10 +30,22 @@ a {
   }
 
   .animate {
-  transition: all 1s ease-in-out;
+  transition: width 2s ease-out;
 }
 
   .animate.wideLanding {
     width: 100%;
+   background-image: url('/board-white.svg');
+   background-repeat: no-repeat;
+}
+
+.boardStyle {
+  display: block;
+  width: 100vh;
+  overflow: hidden;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  transform: rotate(90deg);
 }
 }

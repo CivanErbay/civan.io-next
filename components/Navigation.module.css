@@ -20,9 +20,10 @@
 }
 
 .appear {
-  transition: transform 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .appear.swipein {
   transform: translateY(0);
+  opacity: 1;
 }
