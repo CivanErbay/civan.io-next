@@ -10,11 +10,6 @@ export default function Impressum() {
   const [animate, setAnimate] = useState(false);
 
   return (
-    /*    <div
-      className={`bottom-0 lg:px-5 opacity-0 ${styles.animate} ${
-        animate && styles.appear
-      }`}
-    > */
     <>
       {" "}
       <div
@@ -22,16 +17,16 @@ export default function Impressum() {
           styles.impressumLeft
         } ${styles.animate} ${animate && styles.appearLeft}`}
       >
-        <div className="h-1/3 w-[2px] bg-white"></div>
+        <div className="opacity-0 md:opacity-1 h-1/3 w-[2px] bg-white"></div>
         <h2 className="text-xs">civan.erbay@web.de &#x2f;&#x2f; 2022</h2>
-        <div className="h-1/3 w-[2px] bg-white"></div>
+        <div className="opacity-0 md:opacity-1 h-1/3 w-[2px] bg-white"></div>
       </div>
       <div
         className={`fixed top-0 -right-10 flex justify-between items-center px-4 h-screen ${
           styles.impressumRight
         } ${styles.animate} ${animate && styles.appearRight}`}
       >
-        <div className="h-1/3 w-[2px] bg-white"></div>
+        <div className="opacity-0 md:opacity-1 h-1/3 w-[2px] bg-white"></div>
 
         <a
           href="https://twitter.com/navic_007?lang=de"
@@ -93,7 +88,7 @@ export default function Impressum() {
           </picture>
         </a>
 
-        <div className="h-1/3 w-[2px] bg-white"></div>
+        <div className="opacity-0 md:opacity-1 h-1/3 w-[2px] bg-white"></div>
       </div>
     </>
   );

@@ -35,8 +35,9 @@ a {
 
   .animate.wideLanding {
     width: 100%;
-   background-image: url('/board-white.svg');
+   /* background-image: url('/board-white.svg'); */
    background-repeat: no-repeat;
+   background-size: cover;
 }
 
 .boardStyle {
@@ -45,7 +46,7 @@ a {
   overflow: hidden;
   position: absolute; 
   top: 0; 
-  left: 0; 
+  margin: 0 auto;
   transform: rotate(90deg);
 }
 }

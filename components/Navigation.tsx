@@ -39,7 +39,7 @@ export const Navigation = React.forwardRef<any>((props, ref) => {
         } ${appear && styles.swipein}`}
       >
         <div
-          className={`border-4 p-5 bg-cyan-900 ${classNames(
+          className={`border-4 md:border-8 rounded-md p-5 bg-cyan-900 ${classNames(
             styles.animate,
             styles.navigation,
             animate && styles.hide

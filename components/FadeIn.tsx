@@ -17,7 +17,7 @@ const FadeIn = ({ children }: any, delay: number) => {
   });
   return (
     <Waypoint onEnter={() => setInview(true)}>
-      <animated.div style={transition}>{children}</animated.div>
+      <animated.div className="z-10" style={transition}>{children}</animated.div>
     </Waypoint>
   );
 };

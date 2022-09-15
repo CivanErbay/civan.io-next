@@ -8,6 +8,8 @@ import { Navigation } from "../components/Navigation";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import FadeIn from "../components/FadeIn";
 import { setTimeout } from "timers";
+import  CircuitBoard  from "../components/SVG/CircuitBoard"
+
 
 const Home: NextPage = () => {
   const showCaseRef = useRef<
@@ -19,12 +21,12 @@ const Home: NextPage = () => {
       setAnimate(true);
     }, 10);
 
-    setTimeout(() => {
-      const board = document.getElementById("white-board")
+  /*   setTimeout(() => {
+      const board = document.getElementsByTagName("path")
       console.log(board)
-    }, 5000);
+    }, 2000);
  
-
+   console.log(document.querySelectorAll("svg path")); */
   });
 
   const [animate, setAnimate] = useState(false);
@@ -34,16 +36,16 @@ const Home: NextPage = () => {
 
   return (
     <div id="landing" 
-      className={`flex flex-col items-center justify-center max-w-5xl w-0 mx-auto inset-0 font-Trispace shadow-2xl bg-sky-800 text-white px-5 ${
+      className={`flex flex-col items-center justify-center relative max-w-5xl w-0 mx-auto inset-0 font-Trispace shadow-2xl bg-sky-800 text-white px-5 ${
         "animate"
       } ${animate && "wideLanding"}`} //absolute
     >
 
-    {/*} <div className="boardStyle">
-            <img
-                src="/board-white.svg"
-              />
-    </div> */}
+  <div className="absolute overflow-hidden top-0 left-0 w-full">    
+    <CircuitBoard/>
+  </div>
+
+
       <Head>
         <title>Civan</title>
         <meta name="description" content="Civan Erbay Web Development" />
