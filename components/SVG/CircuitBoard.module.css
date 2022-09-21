@@ -1,5 +1,26 @@
 .pathClass {
-    fill: none;
+/*   fill: white;
+  stroke: #164e63;  */
+   fill: none;
   stroke: white;
-  stroke-width: 4;
+  stroke-width: 2;
+  /* animation: pulsate 5s linear infinite;
+  -webkit-animation: pulsate 5s linear infinite;
+  -moz-animation: pulsate 5s linear infinite; */
+}
+
+@keyframes pulsate {
+  10% {
+    stroke-width: 2;
+    stroke: #164e63;
+  }
+  50% {
+    stroke-width: 3;
+
+    stroke: white;
+  }
+  100% {
+    stroke-width: 2;
+    stroke: #164e63;
+  }
 }
