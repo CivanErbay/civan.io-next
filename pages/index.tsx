@@ -30,7 +30,7 @@ const Home: NextPage = () => {
       } ${animate && "wideLanding"}`} //absolute
     >
 
-  <div className="absolute overflow-hidden top-0 left-0 w-full">    
+  <div className="absolute overflow-hidden -top-1 left-0 w-full z-10">    
    {/*  <CircuitBoard/> */}
     <CircuitBoardMin/>
   </div>

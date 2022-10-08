@@ -27,7 +27,7 @@ export default function Landing() {
       <div className="relative h-screen w-full flex items-center justify-center flex-col px-7 lg:flex-row text-white">
         <div className="flex w-full justify-evenly items-center flex-col lg:flex-row">
           <div
-            className={`lg:w-[450px] rounded-md border-4 md:border-8 bg-cyan-900 p-10 flex flex-col text-xl opacity-0 -translate-x-8 ${
+            className={`lg:w-[450px] rounded-md bg-white text-black p-10 flex flex-col text-xl opacity-0 -translate-x-8 ${
               styles.animate
             } ${animate && styles.appear}`}
           >
@@ -43,7 +43,7 @@ export default function Landing() {
           </div>
 
           <div
-            className={`civan-box w-[150px] h-[150px] rounded-md relative mt-5 lg:mt-0 lg:w-[250px] lg:h-[250px] opacity-0 border-4 md:border-8 bg-cyan-900 overflow-hidden drop-shadow-2xl translate-x-8 ${
+            className={`w-[150px] h-[150px] rounded-md relative mt-5 lg:mt-0 lg:w-[250px] lg:h-[250px] opacity-0 bg-white overflow-hidden drop-shadow-2xl translate-x-8 ${
               styles.animate
             } ${animate2 && styles.appear}`}
           >
