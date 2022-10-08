@@ -14,7 +14,7 @@ export default function Footer() {
         ></Image>
       </div> */}
       <Link href={"./legal"}>
-        <a className="absolute right-0 bottom-0 p-4 border-4 md:border-8 p-5 bg-cyan-900 rounded-md">legal notice</a>
+        <a className="absolute right-0 bottom-2">legal notice</a>
       </Link>
     </div>
   );

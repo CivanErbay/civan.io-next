@@ -8,6 +8,7 @@ import { Navigation } from "../components/Navigation";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import { setTimeout } from "timers";
 import  CircuitBoard  from "../components/SVG/CircuitBoard"
+import  CircuitBoardMin  from "../components/SVG/CircuitBoardMin"
 
 
 const Home: NextPage = () => {
@@ -30,7 +31,8 @@ const Home: NextPage = () => {
     >
 
   <div className="absolute overflow-hidden top-0 left-0 w-full">    
-    <CircuitBoard/>
+   {/*  <CircuitBoard/> */}
+    <CircuitBoardMin/>
   </div>
 
 

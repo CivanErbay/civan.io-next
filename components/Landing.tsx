@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Description from "./Description";
 import styles from "./Landing.module.css";
 import Image from "next/image";
+import { gsap } from "gsap";
+
 
 
 export default function Landing() {
@@ -13,6 +15,8 @@ export default function Landing() {
     setTimeout(() => {
       setAnimate2(true);
     }, 1500);
+
+
   });
 
   const [animate, setAnimate] = useState(false);
@@ -27,7 +31,7 @@ export default function Landing() {
               styles.animate
             } ${animate && styles.appear}`}
           >
-            <span>Hey there!</span>
+            <span>Sup Visitor!</span>
             <span className="text-4xl lg:text-5xl py-4 font-bold">
               I&apos;m <span className="font-bold ">Civan</span>
             </span>
@@ -39,11 +43,12 @@ export default function Landing() {
           </div>
 
           <div
-            className={`w-[150px] h-[150px] rounded-md relative mt-5 lg:mt-0 lg:w-[250px] lg:h-[250px] opacity-0 border-4 md:border-8 bg-cyan-900 overflow-hidden drop-shadow-2xl translate-x-8 ${
+            className={`civan-box w-[150px] h-[150px] rounded-md relative mt-5 lg:mt-0 lg:w-[250px] lg:h-[250px] opacity-0 border-4 md:border-8 bg-cyan-900 overflow-hidden drop-shadow-2xl translate-x-8 ${
               styles.animate
             } ${animate2 && styles.appear}`}
           >
             <Image
+              className="civan"
               src="/pixel_me.png"
               layout="fill"
               objectFit="contain"

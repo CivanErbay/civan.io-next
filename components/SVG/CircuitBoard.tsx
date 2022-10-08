@@ -39,6 +39,22 @@ const CircuitBoard = (props: any) => {
     return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
   }, []);
 
+  //g means group of paths - works like somehow like a div, you can apply fill and stroke there to all including elements (except you overwrite the)
+  //d= means drawing
+
+  //Inside Path Data --> Capital letters are absolute, small letters are relative
+  //Z,z at the end of a drawing means its closing the shape at the point of beginning
+  //M moveTo --> at the beginning and it will never work with out the M
+  //L,l lineTo --> straigt line
+  //H,h horizontal Line --> needs only y Position
+  //V,v vertical Line --> needs only X Position
+  //C,c cubic-bezier --> two dots curve
+  //S,s reflecting cubic-bezier --> two dots curve mirrored
+  //Q,q quadratic bezier --> like cubic bezier but with only one control point between
+  //T,t reflecting quadratic-bezier --> quadratic-bezier mirrored
+  //A,a elliptical
+
+
   return (
     <svg
       id="white-board"

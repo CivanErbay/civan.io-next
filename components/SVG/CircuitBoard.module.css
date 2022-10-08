@@ -1,26 +1,29 @@
+/* Hardware accelaration HACK - See SVG course on Frontendmasters "Perfomance & GSAP" */
+/* @mixin accelerate() {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+} */
+
 .pathClass {
-/*   fill: white;
-  stroke: #164e63;  */
-   fill: none;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  fill: #075985;
   stroke: white;
   stroke-width: 2;
-  /* animation: pulsate 5s linear infinite;
-  -webkit-animation: pulsate 5s linear infinite;
-  -moz-animation: pulsate 5s linear infinite; */
+  animation: pulsate 5s 2s ease-out; /* name-you-pick, x seconds longs, wait x seconds, how many times etc  --> minus value starts earlier*/
+}
+
+.svg {
+  overflow: visible;
 }
 
 @keyframes pulsate {
-  10% {
-    stroke-width: 2;
-    stroke: #164e63;
-  }
-  50% {
-    stroke-width: 3;
-
-    stroke: white;
+  0% {
+    fill: #075985;
   }
   100% {
-    stroke-width: 2;
-    stroke: #164e63;
+    fill: white;
   }
 }
