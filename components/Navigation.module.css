@@ -34,8 +34,8 @@
     box-shadow: 0;
   }
   100% {
-    -webkit-box-shadow: -4px 4px 0px 2px #000000;
-    box-shadow: -4px 4px 0px 2px #000000;
+   -webkit-box-shadow: -17px 15px 0px 4px #000000;
+    box-shadow: -17px 15px 0px 4px #000000;
   }
 }
 @keyframes shadowAppear {
@@ -43,7 +43,7 @@
     box-shadow: 0;
   }
   100% {
-    -webkit-box-shadow: -4px 4px 0px 2px #000000;
-    box-shadow: -4px 4px 0px 2px #000000;
+    -webkit-box-shadow: -10px 8px 0px 2px #000000;
+    box-shadow: -10px 8px 0px 2px #000000;
   }
 }

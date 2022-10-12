@@ -1,21 +1,21 @@
 .animate {
-  animation: appear 3s 3s ease-out, shadowAppearMobile 2s 4s ease-out;
+  animation: appear 2s 2s ease-out, shadowAppearMobile 1s 4s ease-out;
   animation-fill-mode: forwards;
 }
 
 .animate2 {
-  animation: appear 3s 5s ease-out, shadowAppearMobile 2s 6s ease-out;
+  animation: appear 2s 5s ease-out, shadowAppearMobile 1s 6s ease-out;
   animation-fill-mode: forwards;
 }
 
 .animate3 {
-  animation: appear 3s 7s ease-out, shadowAppearMobile 2s 7s ease-out;
+  animation: appear 2s 9s ease-out, shadowAppearMobile 1s 7s ease-out;
   animation-fill-mode: forwards;
 }
 
-.logo span {
+/* .logo span {
   margin-bottom: 40px !important;
-}
+} */
 
 @media (min-width: 768px) {
   .logo span {
@@ -23,17 +23,17 @@
   }
 
   .animate {
-    animation: appear 3s 3s ease-out, shadowAppear 2s 4s ease-out;
+    animation: appear 2s 3s ease-out, shadowAppear 1s 4s ease-out;
     animation-fill-mode: forwards;
   }
 
   .animate2 {
-    animation: appear 3s 5s ease-out, shadowAppear 2s 6s ease-out;
+    animation: appear 2s 5s ease-out, shadowAppear 1s 6s ease-out;
     animation-fill-mode: forwards;
   }
 
   .animate3 {
-    animation: appear 3s 7s ease-out, shadowAppear 2s 7s ease-out;
+    animation: appear 2s 7s ease-out, shadowAppear 1s 7s ease-out;
     animation-fill-mode: forwards;
   }
 }

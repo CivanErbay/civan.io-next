@@ -5,24 +5,25 @@
   perspective: 1000px;
 } */
 
+/*animation --> name-you-pick, x seconds longs, wait x seconds, how many times etc  --> minus value starts earlier*/
+
 .pathOne {
   fill: none;
   stroke-width: 1;
-  animation: drawFill 3s 2s ease-out forwards; /* name-you-pick, x seconds longs, wait x seconds, how many times etc  --> minus value starts earlier*/
+  animation: drawFill 3s 2s ease-out forwards;
 }
 
 .pathTwo {
   fill: none;
   stroke-width: 1;
-  animation: drawFill 3s 4s ease-out forwards;
+  animation: drawFill 3s 5s ease-out forwards;
 }
 
 .pathThree {
   fill: none;
   stroke-width: 1;
-  animation: drawFill 3s 6s ease-out forwards;
+  animation: drawFill 3s 9s ease-out forwards;
 }
-
 
 .svgWrapper {
   position: relative;
