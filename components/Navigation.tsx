@@ -34,7 +34,7 @@ export const Navigation = React.forwardRef<any>((props, ref) => {
   return (
     <>
       <div
-        className={`sticky top-0 opacity-0 py-5 z-50 flex w-screen lg:justify-end lg:w-full -translate-y-10 ${
+        className={`sticky lg:top-11 opacity-0 py-5 z-50 flex w-full lg:justify-end lg:w-full -translate-y-10 ${
           styles.appear
         } ${appear && styles.swipein}`}
       >

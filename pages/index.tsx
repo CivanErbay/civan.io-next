@@ -24,17 +24,16 @@ const Home: NextPage = () => {
 
   const [animate, setAnimate] = useState(false);
   return (
-    <div id="landing" 
-      className={`flex flex-col items-center justify-center relative max-w-5xl w-0 mx-auto inset-0 font-Trispace shadow-2xl bg-sky-800 text-white px-5 ${
-        "animate"
-      } ${animate && "wideLanding"}`} //absolute
+    <div
+      id="landing"
+      className={`flex flex-col items-center justify-center relative max-w-sm lg:max-w-5xl w-0 mx-auto inset-0 font-Trispace text-white px-5 ${"animate"} ${
+        animate && "wideLanding"
+      }`} //absolute
     >
-
-  <div className="absolute overflow-hidden -top-1 left-0 w-full z-10">    
-   {/*  <CircuitBoard/> */}
-    <CircuitBoardMin/>
-  </div>
-
+      <div className="absolute overflow-hidden w-full -top-1 lg:left-0 z-10">
+        {/*  <CircuitBoard/> */}
+        <CircuitBoardMin />
+      </div>
 
       <Head>
         <title>Civan</title>
@@ -44,8 +43,8 @@ const Home: NextPage = () => {
       <Navigation ref={showCaseRef} />
       <Landing />
 
-        <Showcases ref={showCaseRef} />
-      
+      <Showcases ref={showCaseRef} />
+
       <Impressum />
 
       <Footer />

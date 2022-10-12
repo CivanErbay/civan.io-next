@@ -1,5 +1,6 @@
 .animate {
   transition: all 0.35s ease-in-out;
+  animation: shadowAppear 1s 1s ease-out forwards;
 }
 
 .animate.hide {
@@ -20,10 +21,29 @@
 }
 
 .appear {
-  transition: all 1s ease-in-out;
+  transition: all 1s ease-out;
 }
 
 .appear.swipein {
   transform: translateY(0);
   opacity: 1;
+}
+
+@-webkit-keyframes shadowAppear {
+  0% {
+    box-shadow: 0;
+  }
+  100% {
+    -webkit-box-shadow: -4px 4px 0px 2px #000000;
+    box-shadow: -4px 4px 0px 2px #000000;
+  }
+}
+@keyframes shadowAppear {
+  0% {
+    box-shadow: 0;
+  }
+  100% {
+    -webkit-box-shadow: -4px 4px 0px 2px #000000;
+    box-shadow: -4px 4px 0px 2px #000000;
+  }
 }
