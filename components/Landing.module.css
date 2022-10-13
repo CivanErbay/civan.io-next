@@ -23,7 +23,7 @@
   }
 
   .animate {
-    animation: appear 2s 3s ease-out, shadowAppear 1s 4s ease-out;
+    animation: appear 2s 2s ease-out, shadowAppear 1s 4s ease-out;
     animation-fill-mode: forwards;
   }
 
@@ -33,7 +33,7 @@
   }
 
   .animate3 {
-    animation: appear 2s 7s ease-out, shadowAppear 1s 7s ease-out;
+    animation: appear 2s 9s ease-out, shadowAppear 1s 7s ease-out;
     animation-fill-mode: forwards;
   }
 }
