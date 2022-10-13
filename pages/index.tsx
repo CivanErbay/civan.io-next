@@ -7,9 +7,7 @@ import { Showcases } from "../components/Showcases";
 import { Navigation } from "../components/Navigation";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import { setTimeout } from "timers";
-import  CircuitBoard  from "../components/SVG/CircuitBoard"
-import  CircuitBoardMin  from "../components/SVG/CircuitBoardMin"
-
+import CircuitBoardMin from "../components/SVG/CircuitBoardMin";
 
 const Home: NextPage = () => {
   const showCaseRef = useRef<
@@ -33,6 +31,7 @@ const Home: NextPage = () => {
       <div className="absolute overflow-hidden w-full -top-1 lg:left-0 z-10">
         {/*  <CircuitBoard/> */}
         <CircuitBoardMin />
+       
       </div>
 
       <Head>

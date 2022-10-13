@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-
+import CroppedBoard from "../components/SVG/CroppedBoard";
 
 // eslint-disable-next-line react/display-name
 export const Showcases = React.forwardRef((props, ref) => {
@@ -9,7 +9,7 @@ export const Showcases = React.forwardRef((props, ref) => {
       ref={(element) => {
         if (typeof ref === "function") {
           ref(element);
-        } else if (ref != null){
+        } else if (ref != null) {
           ref.current = element;
         }
       }}
@@ -22,6 +22,8 @@ export const Showcases = React.forwardRef((props, ref) => {
         <Link href="/">Emmortalise</Link>
         <Link href="/">TellZy</Link>
         <Link href="/">MundZuMund-Festival</Link>
+
+        <CroppedBoard />
       </div>
     </div>
   );
