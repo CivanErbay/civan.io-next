@@ -1,3 +1,4 @@
+//@ts-nocheck
 import type { NextPage } from "next";
 import Head from "next/head";
 import Landing from "../components/Landing";
@@ -5,49 +6,63 @@ import Footer from "../components/Footer";
 import Impressum from "../components/Impressum";
 import { Showcases } from "../components/Showcases";
 import { Navigation } from "../components/Navigation";
-import { MutableRefObject, useEffect, useRef, useState } from "react";
-import { setTimeout } from "timers";
+import { MutableRefObject, useState, useEffect, useRef } from "react";
 import CircuitBoardMin from "../components/SVG/CircuitBoardMin";
+import CircuitStraightLong from "../components/SVG/CircuitStraightLong";
+import CroppedBoard from "../components/SVG/CroppedBoard";
 
 const Home: NextPage = () => {
   const showCaseRef = useRef<
     HTMLButtonElement | null | MutableRefObject<HTMLButtonElement>
   >(null);
 
+  const [scrollPercent, setScrollPercent] = useState("");
+
   useEffect(() => {
-    setTimeout(() => {
-      setAnimate(true);
-    }, 10);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   });
 
-  const [animate, setAnimate] = useState(false);
-  return (
-    <div
-      id="landing"
-      className={`flex flex-col items-center justify-center relative max-w-sm lg:max-w-5xl w-0 mx-auto inset-0 font-Trispace text-white px-5 ${"animate"} ${
-        animate && "wideLanding"
-      }`} //absolute
-    >
-      <div className="absolute overflow-hidden w-full -top-1 lg:left-0 z-10">
-        {/*  <CircuitBoard/> */}
-        <CircuitBoardMin />
-       
-      </div>
+  const handleScroll = (event) => {
+    setScrollPercent(
+      (document.body.scrollTop + document.documentElement.scrollTop) /
+        (document.documentElement.scrollHeight -
+          document.documentElement.clientHeight)
+    );
+    //console.log("scrollPercent", scrollPercent);
+  };
 
+  return (
+    <>
       <Head>
         <title>Civan</title>
         <meta name="description" content="Civan Erbay Web Development" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation ref={showCaseRef} />
-      <Landing />
+      <div
+        id="landing"
+        className={`flex flex-col items-center justify-center w-full relative max-w-sm md:max-w-5xl mx-auto inset-0 font-Trispace text-white px-5 z-10`} //absolute
+      >
+        <div className="absolute overflow-hidden z-10 w-full -top-1 md:left-0">
+          <CircuitBoardMin />
+        </div>
 
-      <Showcases ref={showCaseRef} />
+        {/*  <CircuitStraightLong /> */}
 
-      <Impressum />
+        <Navigation ref={showCaseRef} />
+        <Landing />
 
-      <Footer />
-    </div>
+        <CroppedBoard />
+
+        <Showcases ref={showCaseRef} />
+
+        <Impressum />
+
+        <Footer />
+      </div>
+    </>
   );
 };
 

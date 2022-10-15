@@ -5,61 +5,100 @@ import styles from "./CircuitBoard.module.css";
 import { gsap } from "gsap";
 
 const CircuitBoard = (props: any) => {
-  const [isMobile, setIsMobile] = useState(false);
+  /* const [isMobile, setIsMobile] = useState(false); */
+  const [isFilled, setFilled] = useState(false);
 
   useEffect(() => {
-    window.screen.width < 768 ? setIsMobile(true) : "";
-
+    /*  window.screen.width < 768 ? setIsMobile(true) : ""; */
     const paths = document
       .querySelector("#croppedBoard")
       .querySelectorAll("svg path");
-    console.log(paths);
-    let i = 0;
+
+    const landingDivs = document
+      .querySelector("#landingSection")
+      .querySelectorAll("div");
+
     paths.forEach((item, index) => {
-      i++;
-      let pathLength: number = Math.round(item.getTotalLength());
-      item.setAttribute("stroke-dasharray", pathLength);
-      item.setAttribute("stroke-dashoffset", pathLength);
-      item.setAttribute("stroke-dashoffset", pathLength);
-      //item.style.strokeWidth = 6;
-      let speed = pathLength / 2000;
-      //console.log(speed)
+      let pathLength = item.getTotalLength();
 
-      if (index == 0) {
-        item.innerHTML =
-          "<animate id='a" +
-          i +
-          "' attributeName='stroke-dashoffset' begin='0s' dur='" +
-          speed +
-          "s' to='0' fill='freeze' />";
-      } else {
-        item.innerHTML =
-          "<animate id='a" +
-          i +
-          "' attributeName='stroke-dashoffset' begin='a" +
-          (i - 1) +
-          ".end' dur='" +
-          speed +
-          "s' to='0' fill='freeze' />";
-      }
+      //console.log(item);
 
-      gsap.to(".pathStagger", {
-        stagger: 0.2,
-        fill: "black",
+      // The start position of the drawing
+      item.style.strokeDasharray = pathLength;
+      // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+      item.style.strokeDashoffset = pathLength;
+
+      drawFunction(item, pathLength, landingDivs);
+    });
+  });
+
+  const drawFunction = (path, pathLength, landingDivs) => {
+    if (!isFilled) {
+      let scrollpercent =
+        (document.body.scrollTop + document.documentElement.scrollTop) /
+        (document.documentElement.scrollHeight -
+          document.documentElement.clientHeight);
+
+      let draw = pathLength * scrollpercent;
+
+      landingDivs.forEach((div) => {
+        div.style.boxShadow = `-${scrollpercent * 45}px ${
+          scrollpercent * 60
+        }px 0px ${scrollpercent * 15}px #000000`;
       });
 
-      /*  item.innerHTML =
-        "<animate  attributeName='stroke-dashoffset' begin='0s' dur='5s' to='0' fill='freeze' />"; */
-      //console.log(index, pathLength, item.innerHTML, speed)
-    });
-  }, []);
+      // Reverse the drawing (when scrolling upwards)
+      path.style.strokeDashoffset = pathLength - draw;
+
+      if (scrollpercent > 0.6) {
+        //document.body.style.backgroundColor = "green";
+        setFilled(true);
+        gsap.fromTo(
+          ".pathStagger",
+          { fill: "" },
+          {
+            fill: "black",
+            duration: 2,
+          }
+        );
+        gsap.fromTo(
+          "body",
+          { backgroundColor: "#00c7d7CC" },
+          {
+            backgroundColor: "#164e63",
+            duration: 3,
+          }
+        );
+      }
+    }
+    /*  if (scrollpercent < 0.6) {
+      gsap.fromTo(
+        ".pathStagger",
+        { fill: "black" },
+        {
+          fill: "",
+          duration: 4,
+        }
+      );
+    }
+ */
+    //path.style.fill = `rgba(0, 0, 0, ${scrollpercent})`;
+
+    /*  if (scrollpercent > 0.5)
+      gsap.to(".pathStagger", {
+        stagger: 0.1,
+        fill: "black",
+        opacity: 1,
+        duration: 2,
+      }); */
+  };
 
   return (
     <div className={styles.svgWrapper}>
       <svg
-        width="289"
-        height="276"
-        viewBox="0 0 400 176"
+        width="489"
+        height="476"
+        viewBox="0 0 290 270"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

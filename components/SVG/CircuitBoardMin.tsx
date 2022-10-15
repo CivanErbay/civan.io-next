@@ -9,13 +9,12 @@ const CircuitBoard = (props: any) => {
   useEffect(() => {
     window.screen.width < 768 ? setIsMobile(true) : "";
 
-    const paths = document.querySelectorAll("svg path");
+    const paths = document.querySelector("#fullBoard").querySelectorAll("svg path");
     let i = 0;
     paths.forEach((item, index) => {
       i++;
       let pathLength: number = Math.round(item.getTotalLength());
       item.setAttribute("stroke-dasharray", pathLength);
-      item.setAttribute("stroke-dashoffset", pathLength);
       item.setAttribute("stroke-dashoffset", pathLength);
       //item.style.strokeWidth = 6;
       let speed = pathLength / 500;
@@ -52,7 +51,7 @@ const CircuitBoard = (props: any) => {
         width="2560"
         height="1708.497"
       >
-        <g stroke="#000000" fill="none" strokeOpacity="1">
+        <g stroke="#000000" fill="none" strokeOpacity="1" id="fullBoard">
           {/*    <path
             d="M35 0h13c8 12 5-2 4 71l-4 125-1 59c1 4 0 7-1 11v33l-3 101c-2 31 1 22 7 30l13 13c3 3 6 7 10 8h81c82 0 72-2 83 8l37 36 45 43c31 31 26 27 41 26h44l255 1c4-1 8 0 12-2l16-10c14-6 32 7 25 23-2 6-12 12-22 9-8-2-18-12-25-13H507l-164-1c-5-2-10-8-41-38l-58-56-13-13c-3-3-6-6-10-6l-139-1c-13 2-16-1-20-4-12-13-27-24-27-30-1-6 1-74 1-75l2-106a11645 11645 0 0 0 5-232L35 0m659 557c-4 1-7 4-7 9-1 2 1 5 1 8 9 10 22 0 18-11l-5-5c-2-1-4-2-7-1z"
             className={styles.pathOne}

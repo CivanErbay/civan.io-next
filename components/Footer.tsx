@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="relative w-full ">
-   {/*    <div className="w-[150px] h-[150px] relative lg:w-[300px] lg:h-[300px] bottom-0 mx-auto">
+   {/*    <div className="w-[150px] h-[150px] relative md:w-[300px] md:h-[300px] bottom-0 mx-auto">
         <Image
           src="/pixel_me.png"
           layout="fill"

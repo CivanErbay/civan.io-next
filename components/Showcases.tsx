@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import CroppedBoard from "../components/SVG/CroppedBoard";
 
 // eslint-disable-next-line react/display-name
 export const Showcases = React.forwardRef((props, ref) => {
@@ -17,13 +16,11 @@ export const Showcases = React.forwardRef((props, ref) => {
     >
       <h2 className="font-bold">Showcases</h2>
       <div className="flex flex-col">
-        <Link href="/">deka.de (denkwerk)</Link>
+        {/* <Link href="/">deka.de (denkwerk)</Link>
         <Link href="/">swm.de (denkwerk)</Link>
         <Link href="/">Emmortalise</Link>
         <Link href="/">TellZy</Link>
-        <Link href="/">MundZuMund-Festival</Link>
-
-        <CroppedBoard />
+        <Link href="/">MundZuMund-Festival</Link> */}
       </div>
     </div>
   );

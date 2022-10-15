@@ -21,22 +21,15 @@ a {
   box-sizing: border-box;
 }
 
-  html {
-    /* color-scheme: dark; */
-  }
-  body {
-    background-color: #164e63;
-  }
-
-  .animate {
-  transition: width 2s ease-out;
+html {
+  /* color-scheme: dark; */
+}
+body {
+  /*  background-color: #164e63; */
+  background-color: #00c7d7cc;
 }
 
-  .animate.wideLanding {
-    width: 100%;
-}
-
-.boardStyle {
+/* .boardStyle {
   display: block;
   width: 100vh;
   overflow: hidden;
@@ -45,4 +38,4 @@ a {
   margin: 0 auto;
   transform: rotate(90deg);
 }
-
+ */
