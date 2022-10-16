@@ -9,7 +9,6 @@ import { Navigation } from "../components/Navigation";
 import { MutableRefObject, useState, useEffect, useRef } from "react";
 import CircuitBoardMin from "../components/SVG/CircuitBoardMin";
 import CircuitStraightLong from "../components/SVG/CircuitStraightLong";
-import CroppedBoard from "../components/SVG/CroppedBoard";
 
 const Home: NextPage = () => {
   const showCaseRef = useRef<
@@ -45,7 +44,7 @@ const Home: NextPage = () => {
         id="landing"
         className={`flex flex-col items-center justify-center w-full relative max-w-sm md:max-w-5xl mx-auto inset-0 font-Trispace text-white px-5 z-10`} //absolute
       >
-        <div className="absolute overflow-hidden z-10 w-full -top-1 md:left-0">
+        <div className="absolute overflow-hidden w-full -top-1 md:left-0">
           <CircuitBoardMin />
         </div>
 
@@ -54,7 +53,7 @@ const Home: NextPage = () => {
         <Navigation ref={showCaseRef} />
         <Landing />
 
-        <CroppedBoard />
+
 
         <Showcases ref={showCaseRef} />
 

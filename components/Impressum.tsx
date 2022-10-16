@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Impressum.module.css";
+import CroppedBoard from "../components/SVG/CroppedBoard";
 
 export default function Impressum() {
   useEffect(() => {
@@ -11,16 +12,19 @@ export default function Impressum() {
 
   return (
     <>
-      {" "}
       <div
-        className={`fixed top-0 -left-10 flex justify-between items-center px-4 h-screen ${
+        className={`fixed top-0 -left-10 flex flex-col justify-between items-center px-4 h-screen ${
           styles.impressumLeft
         } ${styles.animate} ${animate && styles.appearLeft}`}
       >
-        <div className="opacity-0 md:opacity-1 h-1/3 w-[2px] bg-white"></div>
-        <h2 className="text-xs">civan.erbay@web.de &#x2f;&#x2f; 2022</h2>
-        <div className="opacity-0 md:opacity-1 h-1/3 w-[2px] bg-white"></div>
+        <div className="">
+          <div className="opacity-0 md:opacity-1 h-1/3 w-[2px] bg-white"></div>
+          <h2 className="text-xs">civan.erbay@web.de &#x2f;&#x2f; 2022</h2>
+          <div className="opacity-0 md:opacity-1 h-1/3 w-[2px] bg-white"></div>
+        </div>
+        <CroppedBoard />
       </div>
+
       <div
         className={`fixed top-0 -right-10 flex justify-between items-center px-4 h-screen ${
           styles.impressumRight

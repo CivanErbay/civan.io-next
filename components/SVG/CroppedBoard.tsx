@@ -41,11 +41,11 @@ const CircuitBoard = (props: any) => {
 
       let draw = pathLength * scrollpercent;
 
-      landingDivs.forEach((div) => {
+     /*  landingDivs.forEach((div) => {
         div.style.boxShadow = `-${scrollpercent * 45}px ${
           scrollpercent * 60
-        }px 0px ${scrollpercent * 15}px #000000`;
-      });
+        }px 0px ${scrollpercent * 15}px #47B5FF`;
+      }); */
 
       // Reverse the drawing (when scrolling upwards)
       path.style.strokeDashoffset = pathLength - draw;
@@ -57,15 +57,15 @@ const CircuitBoard = (props: any) => {
           ".pathStagger",
           { fill: "" },
           {
-            fill: "black",
+            fill: "#47B5FF",
             duration: 2,
           }
         );
         gsap.fromTo(
           "body",
-          { backgroundColor: "#00c7d7CC" },
+          { backgroundColor: "#47B5FF" },
           {
-            backgroundColor: "#164e63",
+            backgroundColor: "#06283D",
             duration: 3,
           }
         );
@@ -96,13 +96,13 @@ const CircuitBoard = (props: any) => {
   return (
     <div className={styles.svgWrapper}>
       <svg
-        width="489"
-        height="476"
-        viewBox="0 0 290 270"
+        width="140"
+        height="140"
+        viewBox="-20 0 1 160"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g stroke="#000000" fill="none" strokeOpacity="1" id="croppedBoard">
+        <g stroke="#47B5FF" fill="none" strokeOpacity="1" id="croppedBoard">
           <path
             d="M12.094 2.1891C21.993 -1.1409 31.4921 2.69908 36.7491 13.7971C37.4871 17.2491 37.9141 20.9821 36.1701 24.2271C33.8461 28.5091 30.485 32.7241 25.636 34.2001C17.501 37.3391 4.66799 34.1831 0.840995 21.8241C-0.324005 18.2921 0.817034 14.6141 1.50603 11.1191C4.52803 6.5131 9.12305 3.3551 12.094 2.1891ZM14.2291 8.0201C9.06306 11.6001 8.67802 19.7131 12.741 24.2811C14.754 26.6051 17.8161 27.2451 20.7011 27.7941C29.6491 25.7941 31.0271 19.1651 29.8991 14.5341C28.5631 7.91607 19.8351 4.2991 14.2291 8.0201Z"
             className="pathStagger"
