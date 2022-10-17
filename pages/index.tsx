@@ -7,7 +7,7 @@ import Impressum from "../components/Impressum";
 import { Showcases } from "../components/Showcases";
 import { Navigation } from "../components/Navigation";
 import { MutableRefObject, useState, useEffect, useRef } from "react";
-import CircuitBoardMin from "../components/SVG/CircuitBoardMin";
+import CircuitChord from "../components/SVG/CircuitChord";
 import CircuitStraightLong from "../components/SVG/CircuitStraightLong";
 
 const Home: NextPage = () => {
@@ -42,18 +42,16 @@ const Home: NextPage = () => {
       </Head>
       <div
         id="landing"
-        className={`flex flex-col items-center justify-center w-full relative max-w-sm md:max-w-5xl mx-auto inset-0 font-Trispace text-white px-5 z-10`} //absolute
+        className={`flex flex-col justify-end w-full relative max-w-sm md:max-w-5xl mx-auto inset-0 font-Trispace text-white px-5 z-10`} //absolute
       >
-        <div className="absolute overflow-hidden w-full -top-1 md:left-0">
-          <CircuitBoardMin />
+        <div className="absolute w-full top-20 md:left-36 rotate-90 z-10">
+          <CircuitChord />
         </div>
 
         {/*  <CircuitStraightLong /> */}
 
         <Navigation ref={showCaseRef} />
         <Landing />
-
-
 
         <Showcases ref={showCaseRef} />
 

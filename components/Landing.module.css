@@ -28,23 +28,23 @@
   }
 
   .animate::after {
-    content: "";
-    height: 34px;
-    width: 290px;
+     content: "";
+    height: 62px;
     background-color: #47b5ff;
     position: absolute;
-    top: 127px;
-    left: -33px;
+    bottom: -33px;
+    left: 19px;
+    width: 95%;
     transform: skewX(-55deg);
   }
   .animate::before {
-    content: "";
-    height: 120px;
-    width: 48px;
+ content: "";
+    height: 550px;
+    width: 89px;
     background-color: #dff6ff;
     position: absolute;
-    left: -57px;
-    top: 24px;
+    left: -25px;
+    bottom: -2px;
     top: px;
     transform: skewY(-35deg);
   }
@@ -52,28 +52,6 @@
   .animate2 {
     animation: appear 2s 5s ease-out /* , shadowAppear 1s 6s ease-out */;
     animation-fill-mode: forwards;
-  }
-
-  .animate2::after {
-    content: "";
-    height: 44px;
-    width: 253px;
-    background-color: #47b5ff;
-    position: absolute;
-    top: 358px;
-    left: 31px;
-    transform: skewX(-55deg);
-  }
-  .animate2::before {
-    content: "";
-    height: 265px;
-    width: 63px;
-    background-color: #dff6ff;
-    position: absolute;
-    left: 0px;
-    top: 115px;
-    top: px;
-    transform: skewY(-35deg);
   }
 
   .animate3 {
