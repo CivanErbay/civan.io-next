@@ -42,16 +42,18 @@ const Home: NextPage = () => {
       </Head>
       <div
         id="landing"
-        className={`flex flex-col justify-end w-full relative max-w-sm md:max-w-5xl mx-auto inset-0 font-Trispace text-white px-5 z-10`} //absolute
+        className={`flex flex-col w-full relative max-w-sm md:max-w-5xl top-0 mx-auto inset-0 font-Trispace text-white px-5 z-10`} //absolute
       >
         <div className="absolute w-full top-20 md:left-36 rotate-90 z-10">
           <CircuitChord />
         </div>
 
         {/*  <CircuitStraightLong /> */}
-
         <Navigation ref={showCaseRef} />
-        <Landing />
+
+        <div className="flex justify-end items-end h-[80vh]">
+          <Landing />
+        </div>
 
         <Showcases ref={showCaseRef} />
 

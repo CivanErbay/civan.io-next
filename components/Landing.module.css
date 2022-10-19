@@ -28,24 +28,23 @@
   }
 
   .animate::after {
-     content: "";
+    content: "";
     height: 62px;
     background-color: #47b5ff;
     position: absolute;
-    bottom: -33px;
-    left: 19px;
-    width: 95%;
+    bottom: -62px;
+    left: -42px;
+    width: 100%;
     transform: skewX(-55deg);
   }
   .animate::before {
- content: "";
-    height: 550px;
+    content: "";
+    height: 120%;
     width: 89px;
-    background-color: #dff6ff;
+    background-color: #00ECD5;
     position: absolute;
-    left: -25px;
-    bottom: -2px;
-    top: px;
+    left: -87px;
+    bottom: -33px;
     transform: skewY(-35deg);
   }
 
@@ -58,6 +57,10 @@
     animation: appear 2s 9s ease-out /* , shadowAppear 1s 7s ease-out */;
     animation-fill-mode: forwards;
   }
+}
+
+.landingWrapper {
+  background-color: #6FF5B0 ;
 }
 
 @-webkit-keyframes appear {

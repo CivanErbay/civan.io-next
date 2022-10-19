@@ -8,7 +8,7 @@ export default function Landing() {
     <>
       <div
         id="landingSection"
-        className="relative md:h-auto pb-10 w-full md:flex-row bg-green-400"
+        className={`relative pb-10 md:w-4/5 md:h-full text-black flex items-center ${styles.landingWrapper}`}
       >
         <div
           className={`h-auto md:w-3/5 md:h-auto flex flex-col font-2xl p-10 opacity-0 ${styles.animate} `}

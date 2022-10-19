@@ -34,18 +34,20 @@ export const Navigation = React.forwardRef<any>((props, ref) => {
   return (
     <>
       <div
-        className={`sticky md:top-11 py-5 z-50 flex w-full md:justify-end md:w-full opacity-1 md:opacity-0 md:-translate-y-10 ${
+        className={`absolute py-5 z-50 flex w-full h-24 md:justify-end opacity-1 md:opacity-0 ${
           styles.appear
         } ${appear && styles.swipein}`}
       >
         <div
-          className={`rounded-md bg-white text-black ${classNames(
+          className={`rounded-md bg-white sticky text-black ${classNames(
             styles.animate,
             styles.navigation,
             animate && styles.hide
           )}`}
         >
-          <button className="pr-4" onClick={scrollIntoView}>Showcases</button>
+          <button className="pr-4" onClick={scrollIntoView}>
+            Showcases
+          </button>
           <button onClick={scrollIntoView}>Contact</button>
         </div>
       </div>
