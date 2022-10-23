@@ -1,6 +1,6 @@
 .animate {
   transition: all 0.35s ease-in-out;
-  animation: shadowAppear 1s 1s ease-out forwards;
+  animation: flashLight 2s 2s 2 ease-out forwards;
 }
 
 .animate.hide {
@@ -29,7 +29,21 @@
   opacity: 1;
 }
 
-@-webkit-keyframes shadowAppear {
+@keyframes flashLight {
+  0% {
+    /* background-color: #075985; */
+
+    background-color: #47b5ff;
+  }
+  10% {
+    background-color: white;
+  }
+  100% {
+    background-color: #47b5ff;
+  }
+}
+
+/* @-webkit-keyframes shadowAppear {
   0% {
     box-shadow: 0;
   }
@@ -46,4 +60,4 @@
     -webkit-box-shadow: -10px 8px 0px 2px #000000;
     box-shadow: -10px 8px 0px 2px #000000;
   }
-}
+} */

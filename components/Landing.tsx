@@ -32,17 +32,12 @@ export default function Landing() {
         <div
           className={`top-[0px] left-0 w-[230px] h-auto md:w-[550px] md:h-auto md:top-[60px] md:left-[70px] absolute rounded-md tet-white  px-6 py-4 md:p-2 flex flex-col font-2xl md:text-7xl`}
         >
-          <span className="headline-1">Sup Visitor!</span>
+          <span className="headline-1 relative top-[40px]">Sup Visitor!</span>
           <br />
-          <span className="headline-2">welcome to my webspace</span>
-          {/*   <div className={styles.shiftedWrapper}>
-            <div className={`text-4xl leading-none md:text-7xl z-10 font-bold ${styles.shiftedContent}`}>
-              I&apos;m <span className="font-bold ">Civan</span>
-            </div>
-            <div className={styles.shiftedBottom}></div>
-            <div className={styles.shiftedLeft}></div>
-          </div>
-          */}
+          <span className="headline-2 relative top-[40px]">
+            welcome to my webspace
+          </span>
+
           <div className={`headline-3 ${styles.button}`}>
             <div className={styles.buttonLink}>
               <h1>
@@ -61,21 +56,21 @@ export default function Landing() {
               a digesting of the incomprehensible for the spirit. HH
             </span> */}
 
-        {/* <div
+     {/*   <div
           className={`w-[200px] h-[165px] top-[240px] right-18 md:w-[350px] md:h-[350px] md:right-[3px] md:top-[325px] absolute rounded-md md:rounded-md px-5 py-2 md:p-8 opacity-0 ${styles.animate2} ${styles.logo}`}
         >
           <Image
             className="civan"
             src="/pixel_me.svg"
-            /* layout="fill" 
+            layout="fill" 
             width={300}
             height={300}
             objectFit="contain"
             alt="civan erbay"
           ></Image> 
           
-        </div>
-
+        </div> */}
+ {/* 
         <div
           className={`bottom-[120px] w-[230px] right-16 md:bottom-auto md:top-[310px] md:left-[90px] md:w-[350px] absolute rounded-md text-white py-3 md:p-8 opacity-0 ${styles.animate3}`}
         >
