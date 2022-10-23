@@ -25,7 +25,6 @@ export const Navigation = React.forwardRef<any>((props, ref) => {
     setTimeout(() => {
       setAppear(true);
     }, 1400);
-
   });
 
   const [animate, setAnimate] = useState(false);
@@ -39,7 +38,7 @@ export const Navigation = React.forwardRef<any>((props, ref) => {
         } ${appear && styles.swipein}`}
       >
         <div
-          className={` py-1 text-white ${classNames(
+          className={` bg-[#47b5ff] py-1 text-white ${classNames(
             styles.animate,
             styles.navigation,
             animate && styles.hide
