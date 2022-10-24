@@ -238,8 +238,8 @@
     width: 100%;
     -webkit-width: 100%;
     -moz-width: 100%;
-    -ms-transform: 100%;
-    -o-transform: 100%;
+    -ms-width: 100%;
+    -o-width: 100%;
   }
 }
 
