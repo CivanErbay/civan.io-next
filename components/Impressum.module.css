@@ -11,14 +11,16 @@
   height: 20px;
 }
 
-.animate {
-  transition: all 1s ease-in-out;
-}
+@media (min-width: 768px) {
+  .animate {
+    transition: all 1s ease-in-out;
+  }
 
-.animate.appearLeft {
-  left: 0;
-}
+  .animate.appearLeft {
+    left: 0;
+  }
 
-.animate.appearRight {
-  right: 0;
+  .animate.appearRight {
+    right: 0;
+  }
 }
