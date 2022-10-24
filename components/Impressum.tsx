@@ -13,7 +13,7 @@ export default function Impressum() {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 md:-left-10 flex flex-col justify-between items-center px-4 h-screen ${
+        className={`fixed top-0 -left-10 flex flex-col justify-between items-center px-4 h-screen ${
           styles.impressumLeft
         } ${styles.animate} ${animate && styles.appearLeft}`}
       >
@@ -26,7 +26,7 @@ export default function Impressum() {
       </div>
 
       <div
-        className={`fixed top-0 right-0 md:-right-10 flex justify-between items-center px-4 h-screen ${
+        className={`fixed top-0 -right-10 flex justify-between items-center px-4 h-screen ${
           styles.impressumRight
         } ${styles.animate} ${animate && styles.appearRight}`}
       >
