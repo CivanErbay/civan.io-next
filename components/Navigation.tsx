@@ -45,7 +45,7 @@ export const Navigation = React.forwardRef<any>((props, ref) => {
           )}`}
         >
           <button className="pr-4" onClick={scrollIntoView}>
-            Showcases
+            Showcase
           </button>
           <button onClick={scrollIntoView}>Contact</button>
         </div>
