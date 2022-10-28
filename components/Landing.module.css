@@ -44,8 +44,12 @@
   display: inline-block;
   text-align: center;
   width: fit-content;
-  top: 153px;
-  right: -115px;
+}
+
+ @-moz-document url-prefix() {
+  .button {
+    top: 50px;
+  }
 }
 
 .buttonLink {
@@ -283,12 +287,11 @@
     margin-bottom: 80px !important;
   }
 
-  .button {
+/*   .button {
     top: unset;
     right: unset;
-    top: 70px;
   }
-
+ */
   .buttonLink {
     font-size: 65px;
     width: unset;

@@ -42,7 +42,7 @@ const Home: NextPage = () => {
       </Head>
       <div
         id="landing"
-        className={`flex flex-col items-center justify-center w-full relative max-w-sm md:max-w-5xl mx-auto border-r border-l border-white inset-0 font-Trispace text-white px-5 z-10`} //absolute
+        className={`flex flex-col items-center justify-center w-full relative max-w-sm md:max-w-5xl mx-auto border-r border-l border-white inset-0 font-Trispace text-white px-5 z-10 antialiased`} //absolute
       >
         <div className="absolute overflow-hidden w-full -top-1 md:left-0">
           <CircuitBoardMin />

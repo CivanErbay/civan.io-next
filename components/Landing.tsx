@@ -30,15 +30,15 @@ export default function Landing() {
         className="relative min-h-[750px] md:h-[1000] w-full flex items-center justify-center flex-col md:flex-row"
       >
         <div
-          className={`top-[0px] left-0 w-[230px] h-auto md:w-[550px] md:h-auto md:top-[60px] md:left-[70px] absolute rounded-md tet-white  px-6 py-4 md:p-2 flex flex-col font-2xl md:text-7xl`}
+          className={`top-[0px] left-0 w-[230px] h-auto md:w-[550px] md:h-[350px] md:top-[60px] md:left-[70px] absolute px-6 py-4 md:p-2 flex flex-col justify-between font-2xl md:text-5xl`}
         >
-          <span className="headline-1 relative top-[40px]">Sup Visitor!</span>
+          <span className="headline-1 relative">Sup Visitor!</span>
           <br />
-          <span className="headline-2 relative top-[40px]">
+          <span className="headline-2 relative">
             welcome to my webspace
           </span>
 
-          <div className={`headline-3 ${styles.button}`}>
+          <div className={`headline-3 ${styles.button} md:top-[80px]`}>
             <div className={styles.buttonLink}>
               <h1>
                 I&apos;m <span className="font-bold text-left">Civan</span>
@@ -70,7 +70,7 @@ export default function Landing() {
           ></Image> 
           
         </div> */}
- {/* 
+      {/* 
         <div
           className={`bottom-[120px] w-[230px] right-16 md:bottom-auto md:top-[310px] md:left-[90px] md:w-[350px] absolute rounded-md text-white py-3 md:p-8 opacity-0 ${styles.animate3}`}
         >
