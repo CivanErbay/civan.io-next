@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Trispace: ["Trispace", "sans-serif"],
+        Oswald: ["Oswald", "sans-serif"],
       },
     },
   },

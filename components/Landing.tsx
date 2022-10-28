@@ -1,10 +1,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import styles from "./Landing.module.css";
-import Image from "next/image";
 import { gsap } from "gsap";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Landing() {
+
+
   useEffect(() => {
     gsap.fromTo(
       ".headline-1",
@@ -50,7 +51,7 @@ export default function Landing() {
             <div className={styles.extrudeBottomAlt}></div>
           </div>
         </div>
-
+      </div>
         {/*  <span>
               Every science is, among other things, an ordering, a simplifying,
               a digesting of the incomprehensible for the spirit. HH
@@ -87,7 +88,7 @@ export default function Landing() {
           </p>
         </div>
         */}
-      </div>
+{/*       </div> */}
     </>
   );
 }
