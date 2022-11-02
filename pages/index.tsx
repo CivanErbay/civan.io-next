@@ -10,7 +10,7 @@ import { MutableRefObject, useState, useEffect, useRef } from "react";
 import CircuitBoardMin from "../components/SVG/CircuitBoardMin";
 import Triangle from "../components/SVG/Triangle";
 import { gsap } from "gsap";
-import CircuitStraightLong from "../components/SVG/CircuitStraightLong";
+import Script from "next/script";
 
 const Home: NextPage = () => {
   const showCaseRef = useRef<
@@ -64,6 +64,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Civan Erbay Web Development" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></Script>
       {preloader ? (
         <>
           <div className="preloader flex items-center justify-center h-screen relative">
