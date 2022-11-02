@@ -75,24 +75,26 @@ const Home: NextPage = () => {
           </h1>
         </>
       ) : (
-        <div
-          id="landing"
-          className={`flex flex-col items-center justify-center w-full relative max-w-sm md:max-w-5xl mx-auto inset-0 font-Trispace text-white px-5 z-10 antialiased`} //absolute
-        >
-          <div className="absolute overflow-hidden w-full -top-1 md:left-0">
-            <CircuitBoardMin />
+        <div className="wrapper-background">
+          <div
+            id="landing"
+            className={`flex flex-col items-center justify-center w-full relative max-w-sm md:max-w-full mx-auto inset-0 font-Trispace text-white px-5 z-10 antialiased`} //absolute
+          >
+           {/*  <div className="absolute overflow-hidden w-full -top-1 md:left-0">
+              <CircuitBoardMin />
+            </div> */}
+
+            {/*  <CircuitStraightLong /> */}
+
+            <Navigation ref={showCaseRef} />
+            <Landing />
+
+            <Showcases ref={showCaseRef} />
+
+            <Impressum />
+
+            <Footer />
           </div>
-
-          {/*  <CircuitStraightLong /> */}
-
-          <Navigation ref={showCaseRef} />
-          <Landing />
-
-          <Showcases ref={showCaseRef} />
-
-          <Impressum />
-
-          <Footer />
         </div>
       )}
     </>
