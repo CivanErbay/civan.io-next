@@ -17,7 +17,6 @@ const Triangle = (props: any) => {
       item.setAttribute("stroke-dashoffset", pathLength);
       //item.style.strokeWidth = 6;
       let speed = pathLength / 250;
-      //console.log(speed)
 
       item.innerHTML =
         "<animate id='a" +
