@@ -26,7 +26,7 @@ export default function Landing() {
     <>
       <div
         id="landingSection"
-        className="relative min-h-[750px] md:h-[1000] w-full flex items-center justify-center flex-col md:flex-row text-black"
+        className="relative min-h-[750px] md:h-[1000] w-full flex items-center justify-center flex-col md:flex-row md:max-w-5xl"
       >
         <div
           className={`top-[0px] left-0 w-[230px] h-auto md:w-[550px] md:h-[350px] md:top-[60px] md:left-[70px] absolute px-6 py-4 md:p-2 flex flex-col font-2xl md:text-5xl`}
